@@ -1,7 +1,7 @@
-#include "problem2.cpp"
 #include "problem1.cpp"
+#include "problem2.cpp"
+#include "problem3.cpp"
 #include <iostream>
-#include <cstdlib>
 using namespace std;
 
 int problem1();
@@ -15,11 +15,16 @@ int main () {
 
   switch (command) {
     case 1: problem1();
+      break;
     case 2: problem2();
+      break;
     case 3: problem3();
+      break;
     case 4: return 0;
+      break;
     default: main();
   }
+  main();
 }
 
 int problem1() {
@@ -33,7 +38,6 @@ int problem1() {
   cin >> exp;
 
   cout << "Result: "<< input.exponent(base,exp) << endl;
-  main();
   return 0;
 }
 
@@ -68,11 +72,9 @@ int problem2() {
   }
   cout << endl;
 
-  main();
   return 0;
 }
 
 int problem3() {
-  main();
   return 0;
 }

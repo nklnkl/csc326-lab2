@@ -10,12 +10,6 @@ Problem2::~Problem2 () {
   delete [] arr;
 }
 
-// Used for problem 1.
-int Problem2::exponent (int x, int n) const {
-  if (n >= 1) return x * exponent(x, n-1);
-  else return 1;
-}
-
 int Problem2::get (int x) const {
   return arr[x];
 }

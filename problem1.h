@@ -1,7 +1,5 @@
 #ifndef _PROBLEM1
 #define _PROBLEM1
-
-#include <iostream>
 using namespace std;
 
 class Problem1 {

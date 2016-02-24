@@ -1,18 +1,11 @@
 #ifndef _PROBLEM2
 #define _PROBLEM2
-
-#include <iostream>
 using namespace std;
 
 class Problem2 {
   public:
     Problem2(int = 5);
     ~Problem2();
-
-    // Evaluates an exponent expression (base and exponent).
-    // Has no relation to the create, insert, sort methods for the array data member.
-    // Used for problem 1.
-    int exponent(int,int) const;
 
     // The rest of these are used for problem2
     bool insert(int);
