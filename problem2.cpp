@@ -32,16 +32,16 @@ bool Problem2::insert (int x) {
   }
 }
 
-void Problem2::sort(int i) {
+void Problem2::sort (int i, int j) {
 
   // If we have surpassed the number of elements.
   if (i > size-1) {
     return;
   }
 
-  // While we haven't reached the zero element yet.
-  for (int j = i; j > 0; j--) {
-    // If current is lower than previous.
+  // If going back, the current count is greater than 0.
+  if (j > 0) {
+    // If the current is lower than a previous element.
     if ( arr[j] < arr[j-1] ) {
       // Cache the current..
       int low = arr[j];
@@ -49,13 +49,17 @@ void Problem2::sort(int i) {
       arr[j] = arr[j-1];
       // Set the previous to the cache
       arr[j-1] = low;
-    // If current is now lower than the previous
+      // Call sort again, but keep our place, and work on the element before.
+      sort(i, j - 1);
     } else {
-      // Set j to 0 to exit loop going back.
-      j = 0;
+      // Call sort again, this time with the next element to sort.
+      sort(i + 1, i + 1);
     }
   }
+  // Else if going back, the current count is 0 or less.
+  else {
+    // Call sort again, this time with the next element to sort.
+    sort(i + 1, i + 1);
+  }
 
-  // Start the sort again with the next element.
-  sort(i + 1);
 }
