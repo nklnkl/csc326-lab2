@@ -76,5 +76,9 @@ int problem2() {
 }
 
 int problem3() {
+  int n;
+  cout << "Enter the discs from the source to be moved to the destination. " << endl;
+  cin >> n;
+  Problem3 hanoi(n);
   return 0;
 }
