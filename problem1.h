@@ -6,7 +6,7 @@ class Problem1 {
     Problem1();
     ~Problem1();
 
-    float exponent (float,float) const;
+    float exponent (float,float,int&);
   private:
 };
 

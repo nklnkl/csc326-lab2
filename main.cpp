@@ -30,6 +30,7 @@ int main () {
 int problem1() {
   float base = 0;
   float exp = 0;
+  int count = 0;
   Problem1 input;
 
   cout << "Base: ";
@@ -37,7 +38,8 @@ int problem1() {
   cout << "Exponent: ";
   cin >> exp;
 
-  cout << "Result: "<< input.exponent(base,exp) << endl;
+  cout << "Result: "<< input.exponent(base,exp,count) << endl;
+  cout << "Number of iterations: " << count << endl;
   return 0;
 }
 
